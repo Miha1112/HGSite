@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Магазин</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+  <div class="top-bar">
+    <div class="login-register">
+      <i class="fas fa-user"></i><a href="/login">Логін/Реєстрація</a>
+    </div>
+    <div class="social-media">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-pinterest"></i></a>
+      <a href="#"><i class="fab fa-google"></i></a>
+    </div>
+  </div>
+</header>
+
+<div class="menu-bar">
+  <ul>
+    <li><a href="#">Історія</a></li>
+    <li><a href="#">Географія</a></li>
+    <li><a href="#">Виховні заходи</a></li>
+    <li><a href="#">Математика</a></li>
+    <li><a href="#">Мова</a></li>
+  </ul>
+  <input type="text" class="search-bar" placeholder="Пошук...">
+
+</div>
+
+<div class="product-grid">
+  <h2>Асортимент продуктів</h2>
+  <div class="product-list">
+    <div class="product-item">
+      <img src="product1.jpg" alt="Продукт 1">
+      <h3>Назва продукту 1</h3>
+      <p>Короткий опис продукту 1</p>
+      <button class="buy-btn">Купити</button>
+    </div>
+    <div class="product-item">
+      <img src="product2.jpg" alt="Продукт 2">
+      <h3>Назва продукту 2</h3>
+      <p>Короткий опис продукту 2</p>
+      <button class="buy-btn">Купити</button>
+    </div>
+    <!-- Додаткові продукти -->
+  </div>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <p class="copyright">2024 всі права захищені</p>
+    <div class="social-media">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-pinterest"></i></a>
+      <a href="#"><i class="fab fa-google"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('.product-images').slick({
+      dots: false,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: true,
+      autoplay: false,
+      autoplaySpeed: 2000,
+      prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+      nextArrow: '<button type="button" class="slick-next">Next</button>'
+    });
+  });
+</script>
+</body>
+
+</html>
